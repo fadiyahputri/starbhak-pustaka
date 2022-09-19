@@ -1,0 +1,111 @@
+<?php 
+    include '../koneksi.php';
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Murid</title>
+
+    <!-- link css -->
+    <link rel="stylesheet" href="../css/styledatamurid.css">
+
+    <!-- link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+</head>
+<body>
+
+    <!-- side-bar -->
+    <div class="side-bar">
+        <div class="logo">
+            <div class="gambar-logo">
+                
+            </div>
+            <p>StarbhakPustaka</p>
+        </div>
+        <div class="profile">
+            <div class="foto-profile">
+
+            </div>
+            <p>Username</p>
+        </div>
+        <div class="select-menu">
+            <div class="grey">
+                <p>MAIN MENU</p>
+            </div>
+
+            <div class="select-dashboard">
+                <div class="logo-select">
+
+                </div>
+                <p>Dashboard</p>
+            </div>
+
+            <div class="grey">
+                <p>Master Data</p>
+            </div>
+            <div class="select-datamurid">
+                <div class="logo-select">
+
+                </div>
+                <p>Data Murid</p>
+            </div>
+            <div class="select-databuku">
+                <div class="logo-select">
+
+                </div>
+                <p>Data Buku</p>
+            </div>
+            <div class="select-penyimpananbuku">
+                <div class="logo-select">
+
+                </div>
+                <p>Data Buku</p>
+            </div>
+            <div class="select-pengembalianbuku">
+                <div class="logo-select">
+
+                </div>
+                <p>Data Buku</p>
+            </div>
+        </div>
+    </div>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="table">
+        <table border="1px">
+            <th>No</th>
+            <th>Id Siswa</th>
+            <th>Nama Siswa</th>
+            <th>Jenis Kelamin</th>
+            <th>Kelas</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Aksi</th>
+    
+            <?php 
+                $sql = "SELECT * FROM datamurid";
+    
+                $query = mysqli_query($connect, $sql);
+                while($datamurid = mysqli_fetch_array($query)) {
+                    echo "<tr>
+                    <td>$datamurid[no_murid]</td>
+                    <td>$datamurid[nama_murid]</td>
+                    <td>$datamurid[jeniskelamin_murid]</td>
+                    <td>$datamurid[kelas_murid]</td>
+                    <td>$datamurid[email_murid]</td>
+                    <td>$datamurid[password_murid]</td>
+                    <td>$datamurid[aksi]</td>
+                    <td>
+                        <a href='editdatamurid.php?id_siswa=".$datamurid['id_murid']."'>Edit</a>
+                        <a href='hapusdatamurid.php?id_siswa=".$datamurid['id_murid']."'onClick=\"return confirm('yakin akan menghapus data ?');\">Hapus</a>
+                    </td>
+                </tr>";
+            }
+            ?>
+    </div>
+    </table>
+</body>
+</html>

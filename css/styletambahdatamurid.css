@@ -19,6 +19,7 @@ body {
     width: 18%;
     height: 778px;
     background-color: #272727;
+    position: absolute;
 }
 
 .side-bar .logo {
@@ -41,12 +42,14 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
+    line-height: 30px;
     color: whitesmoke;
+    font-size: 22px;
     text-align: center;
 }
 
 .profile {
-    margin: 1%, 3%, 2%, 1%;
+    margin: 1%, 10%, 2%, 1%;
 }
 
 .profile p {
@@ -60,6 +63,7 @@ body {
 }
 
 .foto-profile {
+    margin: 10%, 10%, 2%, 1%;
     margin: 0;
     justify-content: center;
     width: 100px;
@@ -138,4 +142,15 @@ body {
     font-family: 'Quicksand';
     font-weight: 400;
     cursor: pointer;
+}
+
+.tambahdatamurid {
+    margin-left: 20%;
+    width: 70%;
+    height: 500px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+}
+
+.tambahdatamurid table {
 }

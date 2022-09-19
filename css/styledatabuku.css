@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F0F3F4;
+}
+
+.table {
+    width: 80%;
+    height: 85%;
+
+}
+
+.side-bar {
+    width: 316px;
+    height: 1025px;
+    background-color: aqua;
+}
+
+.navbar {
+    position: sticky;
+    height: 80px;
+}
+
+.navbar nav {
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    background-color: whitesmoke;
+}
+
+.navbar label {
+    margin: 1% 0.8% 2% 5%;
+    background-color: transparent;
+}
+
+.search {
+    width: 140px;
+    height: 15px;
+    background-color: #F0F3F4;
+}
