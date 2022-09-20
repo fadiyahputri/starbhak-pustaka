@@ -2,29 +2,44 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quicksand';
     box-sizing: border-box;
 }
 
 body {
-    background-color: #F0F3F4;
+    background-color: #e7eaeb;
 }
 
-.table {
-    width: 80%;
-    height: 85%;
+.container {
+    display: flex;
 }
 
 .side-bar {
-    width: 18%;
-    height: 778px;
-    background-color: #272727;
+    width: 20%;
+    height: 100vh;
+    background-color: white;
 }
 
 .side-bar .logo {
     height: 7%;
-    background-color: rgb(48, 48, 48);
+    background-color: #999b84;
+    box-shadow: 1px 1px 7px rgb(0, 0, 0,1);
     margin-bottom: 5%;
+}
+
+.logo {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo p {
+    padding-top: 4%;
+    margin-left: 27.5%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: whitesmoke;
+    cursor: default;
 }
 
 .gambar-logo {
@@ -32,110 +47,247 @@ body {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background-color: whitesmoke;
+    cursor: default;
 }
 
-.logo p {
-    margin-top: 2%;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    color: whitesmoke;
-    text-align: center;
+.gambar-logo img {
+    margin-left: 84%;
+    width: 60px;
+    height: 43px;
 }
 
 .profile {
-    margin: 1%, 3%, 2%, 1%;
+    height: 140px;
 }
 
-.profile p {
-    text-align: center;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 500;   
-    color: whitesmoke;
-    font-size: 22px;
-    margin-bottom: 10%;
+.profile .foto-profile {
+    margin: 5% 36% 4% 36%;
 }
 
-.foto-profile {
-    margin: 0;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    background-color: white;
+.foto-profile img {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
 }
 
-.logo {
+.account-username {
+    height: 34px;
+    margin: 1% 38% 4% 38%;
+}
 
+.account-username a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
 }
 
 .grey {
+    height: 20px;
+}
+
+.grey p {
     font-size: 12px;
-    color: rgb(179, 179, 179);
-    font-family: 'Quicksand';
     font-weight: 200;
+    color: rgb(179, 179, 179);
+    margin-left: 3.9%;
+    cursor: default;
 }
 
-.select-dashboard {
+.select-dashboard,
+.select-datamurid,
+.select-databuku,
+.select-peminjamanbuku,
+.select-pengembalianbuku,
+.select-cetak {
+    box-sizing: border-box;
     height: 50px;
-    background-color: #242424;
-}
-
-.select-dashboard p {
-    margin-left: 26%;
-    color: whitesmoke;
-    font-family: 'Quicksand';
-    font-weight: 400;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.select-datamurid {
-    height: 50px;
+.logo-select i {
+    margin: 1% 5% 8% 4.5%;
+    position: absolute;
 }
 
-.select-datamurid p {
-    margin-left: 26%;
+.select-dashboard a,
+.select-datamurid a,
+.select-databuku a,
+.select-peminjamanbuku a,
+.select-pengembalianbuku a,
+.select-cetak a {
+    padding: 0;
+    text-decoration: none;
+    margin-left: 13.5%;
+    color: rgb(47, 47, 47);
+    font-weight: 600;
+}
+
+.select-dashboard a:hover,
+.select-datamurid a:hover,
+.select-databuku a:hover,
+.select-peminjamanbuku a:hover,
+.select-pengembalianbuku a:hover,
+.select-cetak a:hover {
+    color: black;
+}
+
+.select-dashboard:hover,
+.select-datamurid:hover,
+.select-databuku:hover,
+.select-peminjamanbuku:hover,
+.select-pengembalianbuku:hover,
+.select-cetak:hover {
+    color: white;
+    box-shadow: 1px 1px 7px rgb(186, 186, 186);
+}
+
+.table {
+    margin: 5%;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+
+.addtable-search {
+    display: flex;
+    margin-top: 7%;
+}
+
+.addtable  {
+    margin: 1% 28% 0 16%;
+}
+
+.addtable h4 {
+    width: 130px;
+    background-color: #999b84;
+    border-radius: 2px;
+    padding: 4px;
+    text-align: center;
+}
+
+h4 a{
     color: whitesmoke;
-    font-family: 'Quicksand';
-    font-weight: 400;
-    cursor: pointer;
 }
 
-.select-databuku {
-    height: 50px;
+.search {
+    width: 25%;
+    height: 4%;
+    background-color: rgb(203, 203, 203);
+    border-radius: 18px;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 7px;
+    cursor: text;
 }
 
-.select-databuku p {
-    margin-left: 26%;
+.search-text {
+    background-color: #999b84;
+    padding: 4px;
+
+}
+
+.table table {
+    margin: 1% 10% 4% 17%;
+    font-weight: 500;
+    border-radius: 15px;
+    border: 1px solid #999b84;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+th {
+    padding: 10px;
     color: whitesmoke;
-    font-family: 'Quicksand';
-    font-weight: 400;
-    cursor: pointer;
+    background-color: #999b84;
+    font-size: 15px;
 }
 
-.select-peminjamanbuku {
-    height: 50px;
+th:first-child {
+    background-color: #999b84;
+    border-top-left-radius: 11px;
+
 }
 
-.select-peminjamanbuku p {
-    margin-left: 26%;
-    color: whitesmoke;
-    font-family: 'Quicksand';
-    font-weight: 400;
-    cursor: pointer;
+th:last-child {
+    border-top-right-radius: 15px;
 }
 
-.select-pengembalianbuku {
-    height: 50px;
+td {
+    padding: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #e7eaeb;
 }
 
-.select-pengembalianbuku p {
-    margin-left: 26%;
-    color: whitesmoke;
-    font-family: 'Quicksand';
-    font-weight: 400;
-    cursor: pointer;
+td:first-child {
+    text-align: center;
+}
+
+td a {
+    background-color: #999b84;
+    border-radius: 2px;
+    padding: 1px;
+}
+
+.table p {
+    margin-top: 2.9%;
+    font-size: 34px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    cursor: default;
+}
+
+.table a {
+    text-decoration: none;
+    color: black;
+}
+
+.table h4 {
+    margin: 8% 14% 1% 14%;
+}
+
+/* css tambah data */
+.tambahdatamurid {
+    margin: 5%;
+    width: 80%;
+    background-color: whitesmoke;
+    border-radius: 35px;
+}
+
+.tambahdatamurid p {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 4% 0 4% 0;
+    text-align: center;
+}
+
+
+.tambahdatamurid table {
+    margin: 1% 10% 4% 22.5%;
+    font-weight: 500;
+}
+
+td #button-simpan {
+    background-color: #999b84;
+    width: 100px;
+    padding: 4px;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    margin-left: 81%;
+}
+
+.input-tambahdata {
+    border: none;
+    width: 60vh;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.tulisan {
+    font-size: 17px;
+    margin-right: 10%;
 }

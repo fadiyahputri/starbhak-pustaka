@@ -1,18 +1,30 @@
+<?php 
+    include '../koneksi.php';
+
+    $id_murid = $_GET['id_murid'];
+    $sql = "SELECT * FROM datamurid WHERE id_murid = '$id_murid'";
+    $query = mysqli_query($connect, $sql);
+    $datamurid = mysqli_fetch_assoc($query);
+
+    if (mysqli_num_rows($query) < 1) {
+        die ("data tidak ditemukan");
+    }
+?>
+
+<!-- html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Murid</title>
+    <title>Edit Data Murid</title>
+
     <!-- link css -->
     <link rel="stylesheet" href="../css/styletambahdatamurid.css">
-
-    <!-- link icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <!-- side-bar -->
         <div class="side-bar">
             <!-- logo, nama apk -->
@@ -77,7 +89,7 @@
         </div>
     </div>
     <div class="tambahdatamurid">
-        <p>Tambah Data Murid</p>
+        <p>Edit Data Murid</p>
         <form action="simpandatamurid.php" method="post">
             <table>
                 <tr>
