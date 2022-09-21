@@ -16,16 +16,13 @@
     <!-- link icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
 </head>
-<body id="datamurid">
+<body>
     <div class="container">
-            <!-- side-bar -->
+        <!-- side-bar -->
         <div class="side-bar">
-            <!-- logo, nama apk -->
+            <!-- nama apk -->
             <div class="logo">
-                <div class="gambar-logo">
-                    <img src="../img/logobuku1.png" alt="logo buku">
-                </div>
-                <p>StarbhakPustaka</p>
+                <a href="#dashboard">StarbhakPustaka</a>
             </div>
 
 
@@ -35,7 +32,7 @@
                     <img src="../img/poto_profile.jpg" alt="foto profile">
                 </div>
                 <div class="account-username">
-                    <a href="#username">Username</a>
+                    <a href="#dashboard">Username</a>
                 </div>
             </div>
 
@@ -47,7 +44,7 @@
                 </div>
 
                 <div class="select-dashboard">
-                    <a href="#dashboard">Dashboard</a>
+                    <a href="databuku.php">Dashboard</a>
                 </div>
 
                 <!-- master data -->
@@ -56,19 +53,19 @@
                 </div>
 
                 <div class="select-datamurid">
-                    <a href="#datamurid">Data Murid</a>
+                    <a href="datamurid.php">Data Murid</a>
                 </div>
 
                 <div class="select-databuku">
-                    <a href="#databuku">Data Buku</a>
+                    <a href="databuku.php">Data Buku</a>
                 </div>
 
                 <div class="select-peminjamanbuku">
-                    <a href="#peminjamanbuku">Peminjaman Buku</a>
+                    <a href="peminjamanbuku.php">Peminjaman Buku</a>
                 </div>
 
                 <div class="select-pengembalianbuku">
-                    <a href="#pengembaliananbuku">Pengembalian Buku</a>
+                    <a href="pengembalianbuku.php">Pengembalian Buku</a>
                 </div>
 
                 <!-- cetak -->
@@ -77,7 +74,7 @@
                 </div>
 
                 <div class="select-cetak">
-                    <a href="#cetak">Cetak</a>
+                    <a href="cetak">Cetak</a>
                 </div>
             </div>
         </div>
@@ -101,18 +98,19 @@
                     <th>Jenis Kelamin</th>
                     <th>Kelas</th>
                     <th>Email</th>
-                    <th>Password</th>
+                    <th>Passwword</th>
                     <th>Aksi</th>
                 </tr>
 
                 <?php 
+                    $i = 1;
                     $sql = "SELECT * FROM datamurid";
                     $query = mysqli_query($connect, $sql);
                     while($datamurid = mysqli_fetch_array($query)) {
 
                         echo "
                         <tr>
-                            <td>$datamurid[no_murid]</td>
+                            <td>$i</td>
                             <td>$datamurid[id_murid]</td>                              
                             <td>$datamurid[nama_murid]</td>
                             <td>$datamurid[jeniskelamin_murid]</td>
@@ -123,7 +121,9 @@
                                 <a href='formeditdatamurid.php?id_murid=".$datamurid['id_murid']."'>Edit</a>
                                 <a href='hapusdatamurid.php?id_murid=".$datamurid['id_murid']."'onClick=\"return confirm('yakin akan menghapus data ?');\">Hapus</a>
                             </td>
-                        </tr>";
+                        </tr>
+                        ";
+                        $i++;
                     }
                 ?>
             </table>

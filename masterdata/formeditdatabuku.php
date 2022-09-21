@@ -21,7 +21,7 @@
     <title>Edit Data Buku</title>
 
     <!-- link css -->
-    <link rel="stylesheet" href="../css/styletambahdatamurid.css">
+    <link rel="stylesheet" href="../css/styletambahdatabuku.css">
 </head>
 <body>
 <div class="container">
@@ -29,10 +29,7 @@
         <div class="side-bar">
             <!-- logo, nama apk -->
             <div class="logo">
-                <div class="gambar-logo">
-                    <img src="../img/logobuku1.png" alt="logo buku">
-                </div>
-                <p>StarbhakPustaka</p>
+                <a href="#dashboard">StarbhakPustaka</a>
             </div>
 
 
@@ -42,7 +39,7 @@
                 <img src="../img/poto_profile.jpg" alt="foto profile">
             </div>
             <div class="account-username">
-                <a href="#username">Username</a>
+                <a href="settingusername.php">Username</a>
             </div>
         </div>
 
@@ -54,7 +51,7 @@
             </div>
 
             <div class="select-dashboard">
-                <a href="#dashboard">Dashboard</a>
+                <a href="dashboard.php">Dashboard</a>
             </div>
 
             <!-- master data -->
@@ -63,19 +60,19 @@
             </div>
 
             <div class="select-datamurid">
-                <a href="#datamurid">Data Murid</a>
+                <a href="databuku.php">Data Murid</a>
             </div>
 
             <div class="select-databuku">
-                <a href="#databuku">Data Buku</a>
+                <a href="databuku.php">Data Buku</a>
             </div>
 
             <div class="select-peminjamanbuku">
-                <a href="#peminjamanbuku">Peminjaman Buku</a>
+                <a href="peminjamanbuku.php">Peminjaman Buku</a>
             </div>
 
             <div class="select-pengembalianbuku">
-                <a href="#pengembaliananbuku">Pengembalian Buku</a>
+                <a href="pengembalianbuku.php">Pengembalian Buku</a>
             </div>
 
             <!-- cetak -->
@@ -84,48 +81,42 @@
             </div>
 
             <div class="select-cetak">
-                <a href="#cetak">Cetak</a>
+                <a href="cetak.php">Cetak</a>
             </div>
         </div>
     </div>
     <div class="tambahdatamurid">
         <p>Edit Data Buku</p>
-        <form action="simpandatabuku.php" method="post">
+        <form action="editdatabuku.php" method="post">
             <table>
                 <tr>
                     <td></td>
-                    <td class="tulisan"><label> No </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="number" min="0" name="no_buku"></label></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td class="tulisan"><label> Id </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="number" min="0" name="id_buku"></label></td>
+                    <td><input class="input-tambahdata" value="<?php echo $databuku ['id_buku']?>" required="required" type="hidden" maxlength="60" name="id_buku"></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Judul Buku </label></td>
-                    <td><input class="input-tambahdata" required="required" type="text" maxlength="60" name="judul_buku"></td>
+                    <td><input class="input-tambahdata" value="<?php echo $databuku ['judul_buku']?>" required="required" type="text" maxlength="60" name="judul_buku"></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Genre </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="text" name="genre_buku"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $databuku ['genre_buku']?>" required="required" type="text" name="genre_buku"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Penerbit </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="text" name="penerbit_buku"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $databuku ['penerbit_buku']?>" required="required" type="text" name="penerbit_buku"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Tahun Terbit </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="number" name="tahunterbit_buku"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $databuku ['tahunterbit_buku']?>" required="required" type="number" name="tahunterbit_buku"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Status </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="text" name="status_buku"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $databuku ['status_buku']?>" required="required" type="text" name="status_buku"></label></td>
                 </tr>
                 <tr>
                     <td colspan="3">

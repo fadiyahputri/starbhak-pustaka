@@ -65,7 +65,7 @@
                 </div>
 
                 <div class="select-pengembalianbuku">
-                    <a href="pengembalianbuku.php">Pengembalian Buku</a>
+                    <a href="pengembaliananbuku.php">Pengembalian Buku</a>
                 </div>
 
                 <!-- cetak -->
@@ -78,52 +78,5 @@
                 </div>
             </div>
         </div>
-        <div class="table">
-            <p>Data Buku</p>
-            <div class="addtable-search">
-                <div class="addtable">
-                    <h4><a href="tambahdatabuku.html">Tambah Data</a></h4>
-                </div>
-                <div class="search">
-                    <div class="serach-text">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                </div>
-            </div>
-            <table>
-                <th>No</th>
-                <th>Id Buku</th>
-                <th>Judul Buku</th>
-                <th>Genre</th>
-                <th>Penerbit</th>
-                <th>Tahun Terbit</th>
-                <th>Status</th>
-                <th>Aksi</th>
-    
-            <?php
-                $i = 1;
-                $sql = "SELECT * FROM databuku";
-    
-                $query = mysqli_query($connect, $sql);
-                while($databuku = mysqli_fetch_array($query)) {
-                    echo "<tr>
-                    <td>$i</td>
-                    <td>$databuku[id_buku]</td>
-                    <td>$databuku[judul_buku]</td>
-                    <td>$databuku[genre_buku]</td>
-                    <td>$databuku[penerbit_buku]</td>
-                    <td>$databuku[tahunterbit_buku]</td>
-                    <td>$databuku[status_buku]</td>
-                    <td>
-                        <a href='formeditdatabuku.php?id_buku=".$databuku['id_buku']."'>Edit</a>
-                        <a href='hapusdatabuku.php?id_buku=".$databuku['id_buku']."'onClick=\"return confirm('yakin akan menghapus data ?');\">Hapus</a>
-                    </td>
-                </tr>
-                ";
-                $i++;
-            }
-            ?>
-    </div>
-    </table>
 </body>
 </html>

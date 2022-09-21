@@ -8,5 +8,5 @@
     $query = mysqli_query($connect, $sql)
     or die (mysqli_error($connect));
 
-    echo "<meta http-equiv=refresh content=0.5;URL='datamurid.php'>";
+    echo "<meta http-equiv=refresh content=0.3;URL='datamurid.php'>";
 ?>

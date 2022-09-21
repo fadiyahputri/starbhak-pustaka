@@ -11,84 +11,76 @@
     <!-- link icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
 </head>
-<body>
+<body id="datamurid">
     <div class="container">
-        <!-- side-bar -->
+            <!-- side-bar -->
         <div class="side-bar">
-            <!-- logo, nama apk -->
+            <!-- nama apk -->
             <div class="logo">
-                <div class="gambar-logo">
-                    <img src="../img/logobuku1.png" alt="logo buku">
+                <a href="dashboard.php">StarbhakPustaka</a>
+            </div>
+
+
+            <!-- profile -->
+            <div class="profile">
+                <div class="foto-profile">
+                    <img src="../img/poto_profile.jpg" alt="foto profile">
                 </div>
-                <p>StarbhakPustaka</p>
+                <div class="account-username">
+                    <a href="username.php">Username</a>
+                </div>
             </div>
 
 
-        <!-- profile -->
-        <div class="profile">
-            <div class="foto-profile">
-                <img src="../img/poto_profile.jpg" alt="foto profile">
-            </div>
-            <div class="account-username">
-                <a href="#username">Username</a>
-            </div>
-        </div>
+            <!-- main menu -->
+            <div class="select-menu">
+                <div class="grey">
+                    <p>MAIN MENU</p>
+                </div>
 
+                <div class="select-dashboard">
+                    <a href="dashboard">Dashboard</a>
+                </div>
 
-        <!-- main menu -->
-        <div class="select-menu">
-            <div class="grey">
-                <p>MAIN MENU</p>
-            </div>
+                <!-- master data -->
+                <div class="grey">
+                    <p>MASTER DATA</p>
+                </div>
 
-            <div class="select-dashboard">
-                <a href="#dashboard">Dashboard</a>
-            </div>
+                <div class="select-datamurid">
+                    <a href="datamurid.php">Data Murid</a>
+                </div>
 
-            <!-- master data -->
-            <div class="grey">
-                <p>MASTER DATA</p>
-            </div>
+                <div class="select-databuku">
+                    <a href="databuku.php">Data Buku</a>
+                </div>
 
-            <div class="select-datamurid">
-                <a href="#datamurid">Data Murid</a>
-            </div>
+                <div class="select-peminjamanbuku">
+                    <a href="peminjamanbuku.php">Peminjaman Buku</a>
+                </div>
 
-            <div class="select-databuku">
-                <a href="#databuku">Data Buku</a>
-            </div>
+                <div class="select-pengembalianbuku">
+                    <a href="pengembalianbuku.php">Pengembalian Buku</a>
+                </div>
 
-            <div class="select-peminjamanbuku">
-                <a href="#peminjamanbuku">Peminjaman Buku</a>
-            </div>
+                <!-- cetak -->
+                <div class="grey">
+                    <p>CETAK</p>
+                </div>
 
-            <div class="select-pengembalianbuku">
-                <a href="#pengembaliananbuku">Pengembalian Buku</a>
-            </div>
-
-            <!-- cetak -->
-            <div class="grey">
-                <p>CETAK</p>
-            </div>
-
-            <div class="select-cetak">
-                <a href="#cetak">Cetak</a>
+                <div class="select-cetak">
+                    <a href="cetak.php">Cetak</a>
+                </div>
             </div>
         </div>
-    </div>
     <div class="tambahdatamurid">
         <p>Tambah Data Murid</p>
         <form action="simpandatamurid.php" method="post">
             <table>
                 <tr>
                     <td></td>
-                    <td class="tulisan"><label> No </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="number" min="0" name="no_murid"></label></td>
-                </tr>
-                <tr>
-                    <td></td>
                     <td class="tulisan"><label> Id </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="number" min="0" name="id_murid"></label></td>
+                    <td><label class="label"><input class="input-tambahdata" required="required" type="number" min="0" name="id_murid"></label></td>
                 </tr>
                 <tr>
                     <td></td>

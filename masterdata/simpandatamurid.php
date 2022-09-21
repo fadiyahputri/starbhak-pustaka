@@ -2,7 +2,6 @@
     include '../koneksi.php';
     
     if (isset($_POST['simpandatamurid'])) {
-        $no_murid = $_POST['no_murid'];
         $id_murid = $_POST['id_murid'];
         $nama_murid = $_POST['nama_murid'];
         $jeniskelamin_murid = $_POST['jeniskelamin_murid'];
@@ -10,8 +9,8 @@
         $email_murid = $_POST['email_murid'];
         $password_murid = $_POST['password_murid'];
 
-        $sql = "INSERT INTO datamurid (no_murid, id_murid, nama_murid, jeniskelamin_murid, kelas_murid, email_murid, password_murid)
-                VALUES ('$no_murid, $id_murid', '$nama_murid', '$jeniskelamin_murid', '$kelas_murid', '$email_murid', '$password_murid')";
+        $sql = "INSERT INTO `datamurid`(`id_murid`, `nama_murid`, `jeniskelamin_murid`, `kelas_murid`, `email_murid`, `password_murid`) 
+        VALUES ('$id_murid','$nama_murid','$jeniskelamin_murid','$kelas_murid','$email_murid','$password_murid')";
         
         $query = mysqli_query($connect, $sql);
         
