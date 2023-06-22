@@ -1,21 +1,35 @@
+<?php 
+    include '../koneksi.php';
+
+    $id_murid = $_GET['id_murid'];
+    $sql = "SELECT * FROM datamurid WHERE id_murid = '$id_murid'";
+    $query = mysqli_query($connect, $sql);
+    $datamurid = mysqli_fetch_assoc($query);
+
+    if (mysqli_num_rows($query) < 1) {
+        die ("data tidak ditemukan");
+    }
+?>
+
+<!-- html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data Murid</title>
-    <!-- link css -->
-    <link rel="stylesheet" href="../css/styletambahdatamurid.css">
+    <title>Edit Data Murid</title>
 
-    <!-- link icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+        <!-- link css -->
+        <link rel="stylesheet" href="../css/styletambahdatamurid.css">
 </head>
-<body id="datamurid">
+<body>
     <div class="container">
-            <!-- side-bar -->
+
+        
+        <!-- side-bar -->
         <div class="side-bar">
-            <!-- nama apk -->
+            <!-- logo, nama apk -->
             <div class="logo">
                 <a href="dashboard.php">StarbhakPustaka</a>
             </div>
@@ -39,7 +53,7 @@
                 </div>
 
                 <div class="select-dashboard">
-                    <a href="dashboard">Dashboard</a>
+                    <a href="datamurid.php">Dashboard</a>
                 </div>
 
                 <!-- master data -->
@@ -69,43 +83,48 @@
                 </div>
 
                 <div class="select-cetak">
-                    <a href="cetak.php">Cetak</a>
+                    <a href="#cetak">Cetak</a>
                 </div>
-            </div>
+            </div>    
         </div>
-    <div class="tambahdatamurid">
-        <p>Tambah Data Murid</p>
-        <form action="simpandatamurid.php" method="post">
+        <div class="tambahdatamurid">
+        <p>Edit Data Murid</p>
+        <form action="editdatamurid.php" method="post">
             <table>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Id </label></td>
-                    <td><label class="label"><input class="input-tambahdata" required="required" type="number" min="0" name="id_murid"></label></td>
+                    <td><input class="input-tambahdata" value="<?php echo $datamurid ['id_murid']?>" required="required" type="text" maxlength="60" name="id_murid"></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Nama Murid </label></td>
-                    <td><input class="input-tambahdata" required="required" type="text" maxlength="60" name="nama_murid"></td>
+                    <td><input class="input-tambahdata" value="<?php echo $datamurid['nama_murid']?>" required="required" type="text" maxlength="60" name="nama_murid"></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Jenis Kelamin </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="text" name="jeniskelamin_murid"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $datamurid ['jeniskelamin_murid']?>" required="required" type="text" name="jeniskelamin_murid"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Kelas </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="text, number" name="kelas_murid"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $datamurid ['kelas_murid']?>" required="required" type="text, number" name="kelas_murid"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Email </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="email" name="email_murid"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $datamurid ['email_murid']?>" required="required" type="email" name="email_murid"></label></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td class="tulisan"><label> Password </label></td>
-                    <td><label><input class="input-tambahdata" required="required" type="password" name="password_murid"></label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $datamurid ['password_murid']?>" required="required" type="password" name="password_murid"></label></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="tulisan"><label> Telepon </label></td>
+                    <td><label><input class="input-tambahdata" value="<?php echo $datamurid ['telepon_murid']?>" required="required" type="number" min="0" name="telepon_murid"></label></td>
                 </tr>
                 <tr>
                     <td colspan="3">
@@ -113,6 +132,8 @@
                     </td>
                 </tr>
             </table>
+    </div>
+    
     </div>
 </body>
 </html>

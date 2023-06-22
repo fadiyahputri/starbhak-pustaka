@@ -2,6 +2,6 @@
     $host = "localhost";
     $user = "root";
     $password = "";
-    $database = "perpustakaan";
+    $database = "db_starpus";
     $connect = mysqli_connect($host, $user, $password, $database)
 ?>
