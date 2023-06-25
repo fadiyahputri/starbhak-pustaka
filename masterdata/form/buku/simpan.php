@@ -1,5 +1,5 @@
 <?php 
-    include '../koneksi.php';
+    include '../../../koneksi.php';
     
     if (isset($_POST['simpandatabuku'])) {
         $id_buku = $_POST['id_buku'];
@@ -15,9 +15,9 @@
         $query = mysqli_query($connect, $sql);
         
         if($query) {
-            header('location: databuku.php');
+            header('location: masterdata/buku.php');
         }else {
-            header('location: simpandatabuku.php?status=gagal');
+            header('location: simpan.php?status=gagal');
         }
     }
 ?>

@@ -129,10 +129,10 @@
                     <td>$buku[tahun_terbit]</td>
                     <td>$buku[status]</td>
                     <td>
-                        <a href='formeditbuku.php?id_buku=".$buku['id_buku']."'>
+                        <a href='form/buku/form+edit.php?id_buku=".$buku['id_buku']."'>
                             <iconify-icon icon='akar-icons:edit'></iconify-icon>
                         </a>
-                        <a href='hapusbuku.php?id_buku=".$buku['id_buku']."'onClick=\"return confirm('yakin akan menghapus data ?');\">
+                        <a href='form/buku/hapus.php?id_buku=".$buku['id_buku']."'onClick=\"return confirm('yakin akan menghapus data ?');\">
                             <iconify-icon icon='ic:round-delete'></iconify-icon>
                         </a>
                     </td>

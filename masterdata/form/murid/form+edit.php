@@ -1,5 +1,5 @@
 <?php 
-    include '../koneksi.php';
+    include '../../../koneksi.php';
 
     $id_murid = $_GET['id_murid'];
     $sql = "SELECT * FROM datamurid WHERE id_murid = '$id_murid'";

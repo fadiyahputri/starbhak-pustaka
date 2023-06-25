@@ -140,10 +140,10 @@
                                     <a href=''>
                                         <box-icon class='ic-action' name='info-circle' ></box-icon>
                                     </a>
-                                    <a href='formeditmurid.php?id_murid=".$murid['id_murid']."'>
+                                    <a href='form/murid/form+edit.php?id_murid=".$murid['id_murid']."'>
                                         <box-icon class='ic-action' name='edit-alt'></box-icon>
                                     </a>
-                                    <a href='hapusmurid.php?id_murid=".$murid['id_murid']."'onClick=\"return confirm('yakin akan menghapus data ?');\">
+                                    <a href='form/murid/hapus.php?id_murid=".$murid['id_murid']."'onClick=\"return confirm('yakin akan menghapus data ?');\">
                                         <box-icon class='ic-action' name='trash' type='solid' ></box-icon>
                                     </a>
                                     </td>

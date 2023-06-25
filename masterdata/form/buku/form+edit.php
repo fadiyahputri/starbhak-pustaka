@@ -1,8 +1,8 @@
 <?php 
-    include '../koneksi.php';
+    include '../../../koneksi.php';
 
     $id_buku = $_GET['id_buku'];
-    $sql = "SELECT * FROM databuku WHERE id_buku = '$id_buku'";
+    $sql = "SELECT * FROM buku WHERE id_buku = '$id_buku'";
     $query = mysqli_query($connect, $sql);
     $databuku = mysqli_fetch_assoc($query);
 
